@@ -13,7 +13,7 @@
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
     "express": "~4.13.1",
-    "html-pdf-chrome": "git://github.com/westy92/html-pdf-chrome.git#render-completion-trigger",
+    "html-pdf-chrome": "*",
     "jade": "~1.11.0",
     "lighthouse-logger": "^1.0.0",
     "morgan": "~1.6.1",

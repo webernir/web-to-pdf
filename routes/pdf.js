@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-// const htmlPdf = require('html-pdf-chrome');
-const htmlPdf = require('../pdf-html');
+const htmlPdf = require('html-pdf-chrome');
+// const htmlPdf = require('../pdf-html');
 const chromeLauncher = require('chrome-launcher');
 var conversion = require("phantom-html-to-pdf")();
 const execFile = require('child_process').execFile;
@@ -53,8 +53,7 @@ router.get('/headless', async function (req, res, next) {
   const chrome = await launchChrome()
   console.log(`Chrome debuggable on port: ${chrome.port}`);
   const options = {
-    port: chrome.port, // port Chrome is listening on 
-    completionTrigger: new htmlPdf.CompletionTrigger.Timer(5000) // milliseconds
+    port: chrome.port// milliseconds
   };
   // const url = 'https://github.com/westy92/html-pdf-chrome';
   const url = 'http://localhost:8080/print/forms/3';
